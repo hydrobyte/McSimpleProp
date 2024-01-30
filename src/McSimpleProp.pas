@@ -27,7 +27,7 @@ unit McSimpleProp;
 interface
 
 uses
-  Windows, Classes, SysUtils, ComCtrls;
+  Classes, SysUtils, ComCtrls;
 
 type
   TMcSimpleProp = class
@@ -44,8 +44,8 @@ type
     function  AddNode(const aText: string; aNode: TTreeNode; isParent: Boolean): TTreeNode;
     procedure SelectTabByText(const aText: string);
     procedure SelectNodeByText(const aText: string);
-    function  FindTabByCaption(const aText: string): TTabSheet;
-    function  FindNodeByCaption(const aText: string): TTreeNode;
+    function  FindTabByText(const aText: string): TTabSheet;
+    function  FindNodeByText(const aText: string): TTreeNode;
     function  GetNodePath(aNode: TTreeNode): string;
   end;
 
@@ -97,7 +97,7 @@ var
   selTab: TTabSheet;
 begin
   // find tab
-  selTab := FindTabByCaption(aText);
+  selTab := FindTabByText(aText);
   if ( Assigned(selTab) )
     then fPageControl.ActivePage      := selTab
     else fPageControl.ActivePageIndex := 0; // TabNone
@@ -108,7 +108,7 @@ var
   selNode: TTreeNode;
 begin
   // find tab
-  selNode := FindNodeByCaption(aText);
+  selNode := FindNodeByText(aText);
   if ( Assigned(selNode) ) then
     selNode.Selected := true; // will fire OnChange
 end;
@@ -126,7 +126,7 @@ begin
     else Result := fTreeView.Items.Add(aNode, aText);
 end;
 
-function TMcSimpleProp.FindTabByCaption(const aText: string): TTabSheet;
+function TMcSimpleProp.FindTabByText(const aText: string): TTabSheet;
 var
   found: Boolean;
   k: Integer;
@@ -150,10 +150,9 @@ begin
   end;
 end;
 
-function TMcSimpleProp.FindNodeByCaption(const aText: string): TTreeNode;
+function TMcSimpleProp.FindNodeByText(const aText: string): TTreeNode;
 var
   found: Boolean;
-  k: Integer;
 begin
   Result := nil;
   // preconditions
