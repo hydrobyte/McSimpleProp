@@ -21,6 +21,7 @@ See [test](https://github.com/hydrobyte/McSimpleProp/tree/main/test) folder for 
 Add `McSimpleProp` unit to your project.
 
 Into a `TForm` or a `TFrame` descendant unit, add a `TTreeView` and a `TPageControl` similar to this layout:
+
 ![](./images/Github-01-C.png)
 
 Into the designer, add pages to `TPageControl` and setup each TTabSheet's `Caption` property using names that will be shown into the `TTreeView` navigator. You can create a special tab with `PageIndex = 0` to be shown as a Group node.
