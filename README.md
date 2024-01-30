@@ -23,9 +23,9 @@ Add `McSimpleProp` unit to your project.
 Into a `TForm` or a `TFrame` descendant unit, add a `TTreeView` and a `TPageControl` similar to this layout:
 ![](./images/Github-01-C.png)
 
-Into the `TPageControl` add pages and setup TTabSheet's `Caption` property using names that will be shown into the `TTreeView` navigator. You can create a special tab with `PageIndex = 0` to be shown as Group node.
+Into the designer, add pages to `TPageControl` and setup each TTabSheet's `Caption` property using names that will be shown into the `TTreeView` navigator. You can create a special tab with `PageIndex = 0` to be shown as a Group node.
 
-Add some nodes associated with tabs. You can use `aNode = nil` and `isParent = false` to create Groups of nested Properties.
+Into your code, add some nodes associated with tabs. You can use `aNode = nil` and `isParent = false` to create Groups of nested Properties.
 
 ```pascal
 procedure TFormMain.FormCreate(Sender: TObject);
@@ -47,7 +47,7 @@ begin
 end;
 ```
 
-In order to respond to the user selection into the navigator, create a `TTreeView`'s `OnChange` event handler.
+In order to respond to the user selection on the navigator, create a `TTreeView`'s `OnChange` event handler.
 ```pascal
 procedure TFormMain.TreeViewChange(Sender: TObject; Node: TTreeNode);
 begin
