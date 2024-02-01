@@ -1,7 +1,7 @@
 # McSimpleProp
 A **Delphi / Lazarus / C++Builder** simple and small class to manage properties nested within tabs of a `TPageControl` and a navigation control using a `TTreeView`. 
 
-![](./images/Github-01-A.png) ![](./images/Github-01-B.png)
+![](./images/Github-01-A.png) 
 
 ## Motivation
 * Simple Object-Pascal native code.
@@ -26,7 +26,11 @@ Into a `TForm` or a `TFrame` descendant unit, add a `TTreeView` and a `TPageCont
 
 Into the designer, add pages to `TPageControl` and setup each TTabSheet's `Caption` property using names that will be shown into the `TTreeView` navigator. You can create a special tab with `PageIndex = 0` to be shown as a Group node.
 
-Into your code, add some nodes associated with tabs. You can use `aNode = nil` and `isParent = false` to create Groups of nested Properties.
+Into your code, add some nodes associated with tabs. 
+
+You can use `aNode = nil` and `isParent = false` to create Groups of nested Properties on `TTreeView`'s first level of nodes.
+
+To create a child for a `node`, pass it into `aNode` and set `isParent = true`. 
 
 ```pascal
 procedure TFormMain.FormCreate(Sender: TObject);
@@ -37,6 +41,7 @@ begin
   fMcSimpleProp := TMcSimpleProp.Create(TreeView, PageControl);
   // ... add nodes
   node := fMcSimpleProp.AddNode('Group 1'   , nil , false);
+  node := fMcSimpleProp.AddNode('Sub Group' , node, true );
   node := fMcSimpleProp.AddNode(Tab1.Caption, node, true );
   node := fMcSimpleProp.AddNode('Group 2'   , nil , false);
   node := fMcSimpleProp.AddNode(Tab2.Caption, node, true );

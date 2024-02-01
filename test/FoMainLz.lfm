@@ -3,7 +3,7 @@ object FormMain: TFormMain
   Height = 422
   Top = 250
   Width = 627
-  Caption = 'FormMain'
+  Caption = 'Test McSimpleProp'
   ClientHeight = 422
   ClientWidth = 627
   OnCreate = FormCreate

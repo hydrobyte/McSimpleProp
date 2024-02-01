@@ -16,7 +16,6 @@ uses
 
 begin
   RequireDerivedFormResource:=True;
-  Application.Title:='prjtestmcsimpleprop';
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TFormMain, FormMain);

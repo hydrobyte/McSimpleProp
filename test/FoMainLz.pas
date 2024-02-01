@@ -61,6 +61,7 @@ begin
   fMcSimpleProp := TMcSimpleProp.Create(TreeView, PageControl);
   // ... add nodes
   node := fMcSimpleProp.AddNode('Group 1'   , nil , false);
+  node := fMcSimpleProp.AddNode('Sub Group' , node, true );
   node := fMcSimpleProp.AddNode(Tab1.Caption, node, true );
   node := fMcSimpleProp.AddNode('Group 2'   , nil , false);
   node := fMcSimpleProp.AddNode(Tab2.Caption, node, true );
