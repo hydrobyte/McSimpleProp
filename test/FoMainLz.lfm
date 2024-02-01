@@ -2672,6 +2672,20 @@ object FormMain: TFormMain
           TabOrder = 0
         end
       end
+      object Tab4: TTabSheet
+        Caption = 'Prop 4'
+        ClientHeight = 328
+        ClientWidth = 425
+        object GbxProp4: TGroupBox
+          Left = 2
+          Height = 105
+          Top = 2
+          Width = 411
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'Properties 4'
+          TabOrder = 0
+        end
+      end
     end
   end
 end

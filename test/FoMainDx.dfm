@@ -2679,6 +2679,22 @@ object FormMain: TFormMain
           TabOrder = 0
         end
       end
+      object Tab4: TTabSheet
+        Caption = 'Prop 4'
+        ImageIndex = 4
+        DesignSize = (
+          439
+          289)
+        object GbxProp4: TGroupBox
+          Left = 2
+          Top = 2
+          Width = 433
+          Height = 105
+          Anchors = [akLeft, akTop, akRight]
+          Caption = 'Properties 4'
+          TabOrder = 0
+        end
+      end
     end
   end
 end

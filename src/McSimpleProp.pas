@@ -51,7 +51,7 @@ type
 
 implementation
 
-const C_McSimpleProp_VERSION = '0.0.1';
+const C_McSimpleProp_VERSION = '0.9.0';
 
 { ---------------------------------------------------------------------------- }
 { TMcSimpleProp }
@@ -121,9 +121,9 @@ begin
   if ( not Assigned(fTreeView) ) then
     exit;
   // add
-  if (isParent)
-    then Result := fTreeView.Items.AddChild(aNode, aText)
-    else Result := fTreeView.Items.Add(aNode, aText);
+  if ( isParent )
+    then Result := fTreeView.Items.AddChild(aNode, aText) //aNode child
+    else Result := fTreeView.Items.Add(aNode, aText);     //aNode sibling
 end;
 
 function TMcSimpleProp.FindTabByText(const aText: string): TTabSheet;

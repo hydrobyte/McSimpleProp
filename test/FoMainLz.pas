@@ -17,6 +17,7 @@ type
     GbxProp1: TGroupBox;
     GbxProp2: TGroupBox;
     GbxProp3: TGroupBox;
+    GbxProp4: TGroupBox;
     ImgLogo: TImage;
     LbHeader: TLabel;
     LbNone: TLabel;
@@ -31,6 +32,7 @@ type
     Tab2: TTabSheet;
     Tab3: TTabSheet;
     TabNone: TTabSheet;
+    Tab4: TTabSheet;
     TreeView: TTreeView;
     procedure BtCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -56,16 +58,17 @@ var
   node: TTreeNode;
 begin
   // version
-  LbVersion.Caption := 'Test McSimpleProp 0.0.1 - Lazarus 2.3.0';
+  LbVersion.Caption := 'Test McSimpleProp 0.9.0 - Lazarus 2.3.0';
   // McSimpleProp setup
   fMcSimpleProp := TMcSimpleProp.Create(TreeView, PageControl);
   // ... add nodes
   node := fMcSimpleProp.AddNode('Group 1'   , nil , false);
   node := fMcSimpleProp.AddNode('Sub Group' , node, true );
   node := fMcSimpleProp.AddNode(Tab1.Caption, node, true );
+  node := fMcSimpleProp.AddNode(Tab2.Caption, node, false);
   node := fMcSimpleProp.AddNode('Group 2'   , nil , false);
-  node := fMcSimpleProp.AddNode(Tab2.Caption, node, true );
-  node := fMcSimpleProp.AddNode(Tab3.Caption, nil , false);
+  node := fMcSimpleProp.AddNode(Tab3.Caption, node, true );
+  node := fMcSimpleProp.AddNode(Tab4.Caption, nil , false);
   // ... prepare controls
   fMcSimpleProp.Prepare;
   // ... select node related to Tab1 by default

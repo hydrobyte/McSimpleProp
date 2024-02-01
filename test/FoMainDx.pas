@@ -31,6 +31,8 @@ type
     ImgLogo: TImage;
     LbVersion: TLabel;
     LbTM: TLabel;
+    Tab4: TTabSheet;
+    GbxProp4: TGroupBox;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure TreeViewChange(Sender: TObject; Node: TTreeNode);
@@ -53,16 +55,17 @@ var
   node: TTreeNode;
 begin
   // version
-  LbVersion.Caption := 'Test McSimpleProp 0.0.1 - Delphi 10.4 Sydney (CE)';
+  LbVersion.Caption := 'Test McSimpleProp 0.9.0 - Delphi 10.4 Sydney (CE)';
   // McSimpleProp setup
   fMcSimpleProp := TMcSimpleProp.Create(TreeView, PageControl);
   // ... add nodes
   node := fMcSimpleProp.AddNode('Group 1'   , nil , false);
   node := fMcSimpleProp.AddNode('Sub Group' , node, true );
   node := fMcSimpleProp.AddNode(Tab1.Caption, node, true );
+  node := fMcSimpleProp.AddNode(Tab2.Caption, node, false);
   node := fMcSimpleProp.AddNode('Group 2'   , nil , false);
-  node := fMcSimpleProp.AddNode(Tab2.Caption, node, true );
-  node := fMcSimpleProp.AddNode(Tab3.Caption, nil , false);
+  node := fMcSimpleProp.AddNode(Tab3.Caption, node, true );
+  node := fMcSimpleProp.AddNode(Tab4.Caption, nil , false);
   // ... prepare controls
   fMcSimpleProp.Prepare;
   // ... select node related to Tab1 by default
