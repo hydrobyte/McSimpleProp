@@ -14,6 +14,7 @@ A **Delphi / Lazarus / C++Builder** simple and small class to manage properties 
 * Tested with:
    * Delphi 10.4 (CE)
    * Lazarus 2.3.0 (FPC 3.2.2)
+   * C++Builder 10.2 (Pro)
 
 ## How to use it
 See [test](https://github.com/hydrobyte/McSimpleProp/tree/main/test) folder for structured examples.
@@ -22,7 +23,7 @@ Add `McSimpleProp` unit to your project.
 
 Into a `TForm` or a `TFrame` descendant unit, add a `TTreeView` and a `TPageControl` similar to this layout:
 
-![](./images/Github-01-C.png)
+![](./images/Github-02-A.png)
 
 Into the designer, add pages to the `TPageControl` and setup each TTabSheet's `Caption` property using names that will be shown into the `TTreeView` navigator. 
 
