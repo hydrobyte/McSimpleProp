@@ -83,7 +83,7 @@
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <BCC_PCHName_Clang>PrjTestMcSimplePropPCH.h</BCC_PCHName_Clang>
+        <BCC_PCHName_Clang>PrjTestMcSimplePropCX102PCH.h</BCC_PCHName_Clang>
         <FinalOutputDir>.\$(Platform)\CBuilder\$(Config)</FinalOutputDir>
         <IntermediateOutputDir>.\$(Platform)\CBuilder\$(Config)</IntermediateOutputDir>
         <DCC_HppOutput>.\$(Platform)\CBuilder\Include</DCC_HppOutput>
@@ -91,7 +91,7 @@
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <PackageImports>adortl;appanalytics;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CustomIPTransport;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXInterBaseDriver;DBXMySQLDriver;DBXSqliteDriver;DOSCommandCR;dsnap;dsnapcon;dsnapxml;EHSRun;FireDACADSDriver;FireDACCommonODBC;FireDACMSAccDriver;FireDACMySQLDriver;FireDACPgDriver;fmx;fmxFireDAC;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inetdb;inetdbxpress;QR506Run;rtl;tethering;tmsdXE11;tmsexdXE11;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
         <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
-        <BCC_PCHName_Clang>PrjTestMcSimplePropPCH.h</BCC_PCHName_Clang>
+        <BCC_PCHName_Clang>PrjTestMcSimplePropCX102PCH.h</BCC_PCHName_Clang>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
@@ -129,19 +129,19 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppEnableHighDPI>true</AppEnableHighDPI>
-        <BCC_PCHName_Clang>PrjTestMcSimplePropPCH.h</BCC_PCHName_Clang>
+        <BCC_PCHName_Clang>PrjTestMcSimplePropCX102PCH.h</BCC_PCHName_Clang>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
-        <BCC_PCHName_Clang>PrjTestMcSimplePropPCH.h</BCC_PCHName_Clang>
+        <BCC_PCHName_Clang>PrjTestMcSimplePropCX102PCH.h</BCC_PCHName_Clang>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="..\src\McSimpleProp.pas">
             <BuildOrder>3</BuildOrder>
         </DelphiCompile>
         <CppCompile Include="FoMainCx.cpp">
-            <Form>Form1</Form>
+            <Form>FormMain</Form>
             <FormType>dfm</FormType>
             <DependentOn>FoMainCx.h</DependentOn>
             <BuildOrder>2</BuildOrder>
@@ -149,7 +149,7 @@
         <CppCompile Include="PrjTestMcSimplePropCX102.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
-        <PCHCompile Include="PrjTestMcSimplePropPCH.h">
+        <PCHCompile Include="PrjTestMcSimplePropCX102PCH.h">
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>

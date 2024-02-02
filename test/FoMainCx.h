@@ -12,7 +12,7 @@
 
 #include "McSimpleProp.hpp"
 //---------------------------------------------------------------------------
-class TForm1 : public TForm
+class TFormMain : public TForm
 {
 __published:
   TSplitter *Splitter;
@@ -41,12 +41,12 @@ __published:
   void __fastcall TreeViewChange(TObject *Sender, TTreeNode *Node);
   void __fastcall BtCloseClick(TObject *Sender);
 public:
-  __fastcall TForm1(TComponent* Owner);
+  __fastcall TFormMain(TComponent* Owner);
 
 private:
   TMcSimpleProp* FMcSimpleProp;
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
+extern PACKAGE TFormMain *FormMain;
 //---------------------------------------------------------------------------
 #endif

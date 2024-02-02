@@ -6,15 +6,15 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TForm1 *Form1;
+TFormMain *FormMain;
 //---------------------------------------------------------------------------
-__fastcall TForm1::TForm1(TComponent* Owner)
+__fastcall TFormMain::TFormMain(TComponent* Owner)
   : TForm(Owner)
 {
 }
 //---------------------------------------------------------------------------
 void __fastcall
-TForm1::FormCreate(TObject *Sender)
+TFormMain::FormCreate(TObject *Sender)
 {
   // version
   LbVersion->Caption = "Test McSimpleProp 0.9.0 - C++Builder 10.2";
@@ -36,20 +36,20 @@ TForm1::FormCreate(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 void __fastcall
-TForm1::FormDestroy(TObject *Sender)
+TFormMain::FormDestroy(TObject *Sender)
 {
   if (FMcSimpleProp) delete (FMcSimpleProp);
 }
 //---------------------------------------------------------------------------
 void __fastcall
-TForm1::TreeViewChange(TObject *Sender, TTreeNode *Node)
+TFormMain::TreeViewChange(TObject *Sender, TTreeNode *Node)
 {
   FMcSimpleProp->SelectTabByText(Node->Text);
   LbHeader->Caption = FMcSimpleProp->GetNodePath(Node);
 }
 //---------------------------------------------------------------------------
 void __fastcall
-TForm1::BtCloseClick(TObject *Sender)
+TFormMain::BtCloseClick(TObject *Sender)
 {
   Close();
 }
