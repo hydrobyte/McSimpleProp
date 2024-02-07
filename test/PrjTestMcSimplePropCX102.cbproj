@@ -87,6 +87,7 @@
         <FinalOutputDir>.\$(Platform)\CBuilder\$(Config)</FinalOutputDir>
         <IntermediateOutputDir>.\$(Platform)\CBuilder\$(Config)</IntermediateOutputDir>
         <DCC_HppOutput>.\$(Platform)\CBuilder\Include</DCC_HppOutput>
+        <Icon_MainIcon>..\images\Icon-McSimpleProp-App.ico</Icon_MainIcon>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <PackageImports>adortl;appanalytics;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CustomIPTransport;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXInterBaseDriver;DBXMySQLDriver;DBXSqliteDriver;DOSCommandCR;dsnap;dsnapcon;dsnapxml;EHSRun;FireDACADSDriver;FireDACCommonODBC;FireDACMSAccDriver;FireDACMySQLDriver;FireDACPgDriver;fmx;fmxFireDAC;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inetdb;inetdbxpress;QR506Run;rtl;tethering;tmsdXE11;tmsexdXE11;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
