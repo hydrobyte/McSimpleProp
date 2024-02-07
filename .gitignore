@@ -99,3 +99,31 @@ lib/
 
 # Application bundle for Mac OS
 *.app/
+
+# My C++Builder History temporaries
+__history/
+__recovery/
+
+# My C++Builder Compiled auxiliaries
+*.obj
+*.o
+*.tds
+*.pch
+*.#*
+*.map
+*.ilc
+*.ild
+*.ilf
+*.ils
+*.pdi
+*.exe
+
+# My C++Builder Project temporaries
+*.~*
+*.local
+*.~dsk
+*.stat
+#TwineCompile
+*.twfd
+*.twopts
+*.@@@
