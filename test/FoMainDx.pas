@@ -55,7 +55,7 @@ var
   node: TTreeNode;
 begin
   // version
-  LbVersion.Caption := 'Test McSimpleProp 0.9.0 - Delphi 10.4 Sydney (CE)';
+  LbVersion.Caption := 'Test McSimpleProp 0.9.1 - Delphi 10.4 Sydney (CE)';
   // McSimpleProp setup
   fMcSimpleProp := TMcSimpleProp.Create(TreeView, PageControl);
   // ... add nodes
@@ -70,6 +70,8 @@ begin
   fMcSimpleProp.Prepare;
   // ... select node related to Tab1 by default
   fMcSimpleProp.SelectNodeByText(Tab1.Caption);
+  // ... or simulate a LastTab selected by its index.
+  fMcSimpleProp.SelectNodeByTabIndex(3);
 end;
 
 procedure TFormMain.FormDestroy(Sender: TObject);

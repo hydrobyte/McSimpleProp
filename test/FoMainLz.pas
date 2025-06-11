@@ -58,7 +58,7 @@ var
   node: TTreeNode;
 begin
   // version
-  LbVersion.Caption := 'Test McSimpleProp 0.9.0 - Lazarus 2.3.0';
+  LbVersion.Caption := 'Test McSimpleProp 0.9.1 - Lazarus 2.3.0';
   // McSimpleProp setup
   fMcSimpleProp := TMcSimpleProp.Create(TreeView, PageControl);
   // ... add nodes
@@ -73,6 +73,8 @@ begin
   fMcSimpleProp.Prepare;
   // ... select node related to Tab1 by default
   fMcSimpleProp.SelectNodeByText(Tab1.Caption);
+  // ... or simulate a LastTab selected by its index.
+  fMcSimpleProp.SelectNodeByTabIndex(3);
 end;
 
 procedure TFormMain.FormDestroy(Sender: TObject);

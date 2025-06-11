@@ -17,7 +17,7 @@ void __fastcall
 TFormMain::FormCreate(TObject *Sender)
 {
   // version
-  LbVersion->Caption = "Test McSimpleProp 0.9.0 - C++Builder 10.2";
+  LbVersion->Caption = "Test McSimpleProp 0.9.1 - C++Builder 10.2";
   // McSimpleProp setup
   FMcSimpleProp = new TMcSimpleProp(TreeView, PageControl);
   // ... add nodes
@@ -33,6 +33,8 @@ TFormMain::FormCreate(TObject *Sender)
   FMcSimpleProp->Prepare();
   // ... select node related to Tab1 by default
   FMcSimpleProp->SelectNodeByText(Tab1->Caption);
+  // ... or simulate a LastTab selected by its index.
+  FMcSimpleProp->SelectNodeByTabIndex(3);
 }
 //---------------------------------------------------------------------------
 void __fastcall

@@ -1,39 +1,39 @@
 object FormMain: TFormMain
   Left = 296
-  Height = 422
+  Height = 528
   Top = 250
-  Width = 627
+  Width = 784
   Caption = 'Test McSimpleProp'
-  ClientHeight = 422
-  ClientWidth = 627
+  ClientHeight = 528
+  ClientWidth = 784
+  DesignTimePPI = 120
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   Position = poScreenCenter
   object TreeView: TTreeView
     Left = 0
-    Height = 381
+    Height = 477
     Top = 0
-    Width = 189
+    Width = 236
     Align = alLeft
-    Indent = 19
     TabOrder = 0
     OnChange = TreeViewChange
   end
   object PanelFooter: TPanel
     Left = 0
-    Height = 41
-    Top = 381
-    Width = 627
+    Height = 51
+    Top = 477
+    Width = 784
     Align = alBottom
     BevelOuter = bvNone
-    ClientHeight = 41
-    ClientWidth = 627
+    ClientHeight = 51
+    ClientWidth = 784
     TabOrder = 1
     object ImgLogo: TImage
-      Left = 8
-      Height = 32
-      Top = 4
-      Width = 32
+      Left = 10
+      Height = 40
+      Top = 5
+      Width = 40
       Anchors = [akLeft, akBottom]
       Picture.Data = {
         055449636F6E932801000000010007003030000001000800A80E000076000000
@@ -2410,33 +2410,34 @@ object FormMain: TFormMain
         410000AC410000AC410000AC410000AC410000AC410000AC410000AC410000AC
         410000AC410000AC410000AC410000AC410000AC410000AC410000AC41
       }
+      Stretch = True
     end
     object LbVersion: TLabel
-      Left = 48
-      Height = 13
-      Top = 8
-      Width = 55
+      Left = 60
+      Height = 17
+      Top = 9
+      Width = 69
       Anchors = [akLeft, akBottom]
       Caption = 'LbVersion'
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -14
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object LbTM: TLabel
-      Left = 48
-      Height = 15
-      Top = 20
-      Width = 121
+      Left = 60
+      Height = 20
+      Top = 23
+      Width = 153
       Anchors = [akLeft, akBottom]
       Caption = 'by HydroByte Software'
     end
     object BtClose: TButton
-      Left = 544
-      Height = 25
-      Top = 8
-      Width = 75
+      Left = 680
+      Height = 31
+      Top = 10
+      Width = 94
       Anchors = [akRight, akBottom]
       Caption = 'Close'
       OnClick = BtCloseClick
@@ -2444,79 +2445,77 @@ object FormMain: TFormMain
     end
   end
   object Splitter: TSplitter
-    Left = 189
-    Height = 381
+    Left = 236
+    Height = 477
     Top = 0
-    Width = 5
+    Width = 6
   end
   object PanelProp: TPanel
-    Left = 194
-    Height = 381
+    Left = 242
+    Height = 477
     Top = 0
-    Width = 433
+    Width = 542
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 381
-    ClientWidth = 433
+    ClientHeight = 477
+    ClientWidth = 542
     TabOrder = 3
     object PanelHeader: TPanel
       Left = 0
-      Height = 25
+      Height = 31
       Top = 0
-      Width = 433
+      Width = 542
       Align = alTop
       BevelOuter = bvNone
-      ClientHeight = 25
-      ClientWidth = 433
+      ClientHeight = 31
+      ClientWidth = 542
       Color = clGrayText
       ParentBackground = False
       ParentColor = False
       TabOrder = 0
       object LbHeader: TLabel
-        Left = 8
-        Height = 13
-        Top = 6
-        Width = 46
+        Left = 10
+        Height = 17
+        Top = 8
+        Width = 58
         Caption = 'LbHeader'
-        Color = clBtnFace
         Font.Color = clWhite
-        Font.Height = -11
+        Font.Height = -14
         Font.Name = 'Tahoma'
-        ParentColor = False
         ParentFont = False
       end
     end
     object PageControl: TPageControl
       Left = 0
-      Height = 356
-      Top = 25
-      Width = 433
-      ActivePage = Tab1
+      Height = 446
+      Top = 31
+      Width = 542
+      ActivePage = TabNone
       Align = alClient
-      TabIndex = 1
+      TabIndex = 0
       TabOrder = 1
       object TabNone: TTabSheet
         Caption = 'TabNone'
-        ClientHeight = 328
-        ClientWidth = 425
+        ClientHeight = 413
+        ClientWidth = 534
         object LbNone: TLabel
-          Left = 8
-          Height = 15
-          Top = 8
-          Width = 180
+          Left = 10
+          Height = 20
+          Top = 10
+          Width = 227
           Caption = 'Please select an option on the left.'
         end
       end
       object Tab1: TTabSheet
         Caption = 'Prop 1'
-        ClientHeight = 328
-        ClientWidth = 425
+        ClientHeight = 413
+        ClientWidth = 534
         ImageIndex = 1
         object GbxProp1: TGroupBox
           Left = 2
-          Height = 105
+          Height = 131
           Top = 2
-          Width = 411
+          Width = 517
           Anchors = [akTop, akLeft, akRight]
           Caption = 'Properties 1'
           TabOrder = 0
@@ -2524,14 +2523,14 @@ object FormMain: TFormMain
       end
       object Tab2: TTabSheet
         Caption = 'Prop 2'
-        ClientHeight = 328
-        ClientWidth = 425
+        ClientHeight = 413
+        ClientWidth = 534
         ImageIndex = 2
         object GbxProp2: TGroupBox
           Left = 2
-          Height = 105
+          Height = 131
           Top = 2
-          Width = 411
+          Width = 517
           Anchors = [akTop, akLeft, akRight]
           Caption = 'Properties 2'
           TabOrder = 0
@@ -2539,14 +2538,14 @@ object FormMain: TFormMain
       end
       object Tab3: TTabSheet
         Caption = 'Prop 3'
-        ClientHeight = 328
-        ClientWidth = 425
+        ClientHeight = 413
+        ClientWidth = 534
         ImageIndex = 3
         object GbxProp3: TGroupBox
           Left = 2
-          Height = 105
+          Height = 131
           Top = 2
-          Width = 411
+          Width = 517
           Anchors = [akTop, akLeft, akRight]
           Caption = 'Properties 3'
           TabOrder = 0
@@ -2554,13 +2553,13 @@ object FormMain: TFormMain
       end
       object Tab4: TTabSheet
         Caption = 'Prop 4'
-        ClientHeight = 328
-        ClientWidth = 425
+        ClientHeight = 413
+        ClientWidth = 534
         object GbxProp4: TGroupBox
           Left = 2
-          Height = 105
+          Height = 131
           Top = 2
-          Width = 411
+          Width = 517
           Anchors = [akTop, akLeft, akRight]
           Caption = 'Properties 4'
           TabOrder = 0

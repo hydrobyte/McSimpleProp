@@ -20,9 +20,6 @@ object FormMain: TFormMain
     Left = 161
     Top = 0
     Height = 342
-    ExplicitLeft = 288
-    ExplicitTop = 136
-    ExplicitHeight = 100
   end
   object TreeView: TTreeView
     Left = 0

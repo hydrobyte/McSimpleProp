@@ -2,7 +2,7 @@
 
   The MIT License (MIT)
 
-  Copyright (c) 2021 - 2024,  HydroByte Software
+  Copyright (c) 2021 - 2025,  HydroByte Software
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -42,11 +42,14 @@ type
 
     procedure Prepare;
     function  AddNode(const aText: string; aNode: TTreeNode; isParent: Boolean): TTreeNode;
+    procedure SelectNodeByTabIndex(const aIdx: Integer);
     procedure SelectTabByText(const aText: string);
     procedure SelectNodeByText(const aText: string);
+    function  FindTabByIndex(const aIdx: Integer): TTabSheet;
     function  FindTabByText(const aText: string): TTabSheet;
     function  FindNodeByText(const aText: string): TTreeNode;
     function  GetNodePath(aNode: TTreeNode): string;
+    function  GetTabCaption(const aIdx: Integer): string;
   end;
 
 implementation
@@ -92,6 +95,12 @@ begin
   end;
 end;
 
+procedure TMcSimpleProp.SelectNodeByTabIndex(const aIdx: Integer);
+begin
+  // select node using tab caption (from tab index).
+  SelectNodeByText( GetTabCaption(aIdx) );
+end;
+
 procedure TMcSimpleProp.SelectTabByText(const aText: string);
 var
   selTab: TTabSheet;
@@ -124,6 +133,30 @@ begin
   if ( isParent )
     then Result := fTreeView.Items.AddChild(aNode, aText) //aNode child
     else Result := fTreeView.Items.Add(aNode, aText);     //aNode sibling
+end;
+
+function TMcSimpleProp.FindTabByIndex(const aIdx: Integer): TTabSheet;
+var
+  found: Boolean;
+  k: Integer;
+begin
+  Result := nil;
+  // preconditions
+  if ( not Assigned(fPageControl) ) then
+    exit;
+  // search for tab
+  found := false;
+  k := 0;
+  while ( (not found) and (k < fPageControl.PageCount) ) do
+  begin
+    if ( fPageControl.Pages[k].PageIndex = aIdx ) then
+    begin
+      Result := fPageControl.Pages[k];
+      found  := true;
+    end
+    else
+      Inc(k);
+  end;
 end;
 
 function TMcSimpleProp.FindTabByText(const aText: string): TTabSheet;
@@ -184,6 +217,16 @@ begin
       else Result := aNode.Text +       Result;
     aNode := aNode.Parent;
   end;
+end;
+
+function TMcSimpleProp.GetTabCaption(const aIdx: Integer): string;
+var
+  selTab: TTabSheet;
+begin
+  selTab := FindTabByIndex(aIdx);
+  if ( Assigned(selTab) )
+    then Result := selTab.Caption
+    else Result := '';
 end;
 
 end.
