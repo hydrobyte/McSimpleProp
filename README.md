@@ -12,7 +12,7 @@ A **Delphi / Lazarus / C++Builder** simple and small class to manage properties 
    * Lazarus.
    * C++Builder 2006 up to now.
 * Tested with:
-   * Delphi 10.4 (CE)
+   * Delphi 12 (CE)
    * Lazarus 2.3.0 (FPC 3.2.2)
    * C++Builder 10.2 (Pro)
 
@@ -50,6 +50,8 @@ begin
   fMcSimpleProp.Prepare;
   // ... select node related to Tab1 by default
   fMcSimpleProp.SelectNodeByText(Tab1.Caption);
+  // ... or simulate a LastTab selected by its index.
+  fMcSimpleProp.SelectNodeByTabIndex(3);
 end;
 ```
 
