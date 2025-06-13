@@ -119,7 +119,10 @@ begin
   // find tab
   selNode := FindNodeByText(aText);
   if ( Assigned(selNode) ) then
+  begin
     selNode.Selected := true; // will fire OnChange
+    selNode.Focused  := true;
+  end;
 end;
 
 function TMcSimpleProp.AddNode(const aText: string; aNode: TTreeNode;
