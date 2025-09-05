@@ -14,6 +14,7 @@ A **Delphi / Lazarus / C++Builder** simple and small class to manage properties 
 * Tested with:
    * Delphi 12 (CE)
    * Lazarus 2.3.0 (FPC 3.2.2)
+   * BDS 2006 (BCB and Delphi)
    * C++Builder 10.2 (Pro)
 
 ## How to use it
